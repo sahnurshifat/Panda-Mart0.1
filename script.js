@@ -162,7 +162,7 @@ function logoutUser() {
 function loginAdmin(email, password) {
     // Simple admin credentials (in real app, this would be more secure)
     const adminCredentials = {
-        email: 'admin@simpleshop.com',
+        email: 'admin@pandamart.com',
         password: 'admin123'
     };
     

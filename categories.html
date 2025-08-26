@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - PandaMart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">PandaMart</h1>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link active">Categories</a>
+                <a href="featured.html" class="nav-link">Featured</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="login.html" class="nav-link" id="auth-link">Login</a>
+                <button id="logout-btn" class="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Categories Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2>Shop by Categories</h2>
+            <p>Browse our wide range of product categories</p>
+        </div>
+    </section>
+
+    <!-- Categories Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Category Filter Buttons -->
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="electronics">Electronics</button>
+                <button class="filter-btn" data-category="accessories">Accessories</button>
+                <button class="filter-btn" data-category="home">Home & Living</button>
+                <button class="filter-btn" data-category="fitness">Fitness</button>
+            </div>
+
+            <!-- Filtered Products -->
+            <div class="filtered-products" id="filtered-products">
+                <h3 class="filter-title">All Products</h3>
+                <div class="products-grid" id="category-products-container">
+                    <!-- Filtered products will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" id="floating-cart">
+        <a href="cart.html" class="cart-button">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 PandaMart. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

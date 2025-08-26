@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Products - PandaMart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">PandaMart</h1>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="featured.html" class="nav-link active">Featured</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="login.html" class="nav-link" id="auth-link">Login</a>
+                <button id="logout-btn" class="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Featured Header -->
+    <section class="page-header featured-header">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <p>Discover our handpicked selection of premium products</p>
+        </div>
+    </section>
+
+    <!-- Featured Products Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="featured-stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="featured-count">0</span>
+                    <span class="stat-label">Featured Items</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">⭐</span>
+                    <span class="stat-label">Top Rated</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">🔥</span>
+                    <span class="stat-label">Best Sellers</span>
+                </div>
+            </div>
+
+            <div class="products-grid" id="all-featured-container">
+                <!-- All featured products will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" id="floating-cart">
+        <a href="cart.html" class="cart-button">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 PandaMart. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

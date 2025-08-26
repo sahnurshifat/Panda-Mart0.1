@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PandaMart- E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">PandaMart</h1>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="categories.html" class="nav-link">Categories</a>
+                <a href="featured.html" class="nav-link">Featured</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="login.html" class="nav-link" id="auth-link">Login</a>
+                <button id="logout-btn" class="logout-btn" style="display: none;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to PandaMart</h2>
+            <p>Discover amazing products at great prices!</p>
+            <div class="hero-search">
+                <div class="search-container-hero">
+                    <input type="text" id="search-input" placeholder="Search for products, categories..." class="search-input-hero">
+                    <button id="search-btn" class="search-btn-hero">
+                        <span class="search-icon">🔍</span>
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Featured Products -->
+            <section class="featured-section">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="products-grid" id="featured-container">
+                    <!-- Featured products will be dynamically loaded here -->
+                </div>
+                <div class="view-all-container">
+                    <a href="featured.html" class="btn btn-secondary">View All Featured Products</a>
+                </div>
+            </section>
+
+            <h2 class="section-title">Our Products</h2>
+            <div class="products-grid" id="products-container">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Floating Cart Button -->
+    <div class="floating-cart" id="floating-cart">
+        <a href="cart.html" class="cart-button">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count" id="cart-count">0</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 PandaMart. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

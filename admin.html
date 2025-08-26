@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - PandaMart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">PandaMart Admin</h1>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Back to Store</a>
+                <a href="admin.html" class="nav-link active">Dashboard</a>
+                <button id="admin-logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Admin Header -->
+    <section class="page-header">
+        <div class="container">
+            <h2>Admin Dashboard</h2>
+            <p>Manage your store products and view statistics</p>
+        </div>
+    </section>
+
+    <!-- Admin Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Admin Stats -->
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="total-products">0</span>
+                    <span class="stat-label">Total Products</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="total-users">0</span>
+                    <span class="stat-label">Registered Users</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="featured-products">0</span>
+                    <span class="stat-label">Featured Products</span>
+                </div>
+            </div>
+
+            <!-- Add Product Form -->
+            <div class="admin-section">
+                <h3>Add New Product</h3>
+                <form id="add-product-form" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-name">Product Name:</label>
+                            <input type="text" id="product-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-price">Price ($):</label>
+                            <input type="number" id="product-price" step="0.01" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Description:</label>
+                        <textarea id="product-description" rows="3" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-category">Category:</label>
+                            <select id="product-category" required>
+                                <option value="">Select Category</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="accessories">Accessories</option>
+                                <option value="home">Home & Living</option>
+                                <option value="fitness">Fitness</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-image">Image URL:</label>
+                            <input type="url" id="product-image" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="product-featured"> Featured Product
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </form>
+            </div>
+
+            <!-- Product Management -->
+            <div class="admin-section">
+                <h3>Manage Products</h3>
+                <div class="product-management">
+                    <div id="admin-products-list">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success/Error Messages -->
+    <div id="admin-message" class="admin-message" style="display: none;">
+        <span id="admin-message-text"></span>
+        <button class="close-message">&times;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 PandaMart Admin Panel. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
